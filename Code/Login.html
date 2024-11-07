@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Linking sheets-->
+        <link rel="stylesheet" href="Culminating.css">
+        <script src="Culminating.jsx"></script>
+        <link rel="icon" type="image/x-icon" href="Favicon.png">
+    </head>
+    <body>
+        <!--nav bar-->
+        <header class="header">
+            <a href="Home.html" class="logo"><image src="Favicon.png" style="height: 60px;"></a>
+            <nav class="navbar">
+                <button class="button" onclick="document.location='Login.html'">Sign up</button>
+                <a onclick="openNav()">&#9776;</a>
+            </nav>
+        </header>
+            <!--side menu bar-->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="Mining.html">Mining</a>
+                <a href="Forestry.html">Foresty</a>
+                <a href="Energy.html">Energy</a>
+                <a href="ClimateChange.html">Climate Change</a>
+                <a href="https://natural-resources.canada.ca/our-natural-resources/indigenous-peoples-and-natural-resources/22004">Indigenous Rights</a>
+            </div>
+        </header>
+        <!--sign up form-->
+        <div class="form-container">
+            <h2>Sign up for weekley newsletter</h2>
+            <form id="sign-up-form" onsubmit="validateForm()">
+              <div class="form-group">
+                <label for="user-email">Enter your email</label>
+                <input type="email" id="user-email" required>
+              </div>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" id="stay-signed">
+                <label for="stay-signed">I would like to receive newsletters</label>
+              </div>
+              <button type="submit" id="sign-up-button">Sign up</button>
+            </form>
+          </div>
+          <script src="Culminating.jsx"></script>
+          <script src="Validate form.js"></script>
+    </body>
+</html>

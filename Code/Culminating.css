@@ -1,0 +1,258 @@
+/*font and global properties*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+    margin: 0;
+    overflow-y: hidden;
+}
+/*
+  Colour Palette
+  #228B22 - Forest Green
+  #8B4513 - Rocky Brown
+  #000080 - Deep Blue
+  #C8102E - Maple Red
+  #DAA520 - Goldenrod
+  #FFFFFF - Ice White
+
+  Extra Colours
+  #1399A7 - Cyan
+  #357960 - Dark Green-Cyan
+  #F8FAE5 - Vanilla
+  #FFDD95 - Skin
+  #A2C579 - Light Moss
+  #F7B787 - Teracotta
+  #FAEED1 - Beige
+
+  Earthy Vibes
+  #Ae887B - terracotta
+  #C3C1AB - green
+  #F0DED0 - pale
+  #E7E5D9 - white???
+  #D9BFB1 - smt
+  #5E5946 - Brown
+  */
+/*nav bar*/
+.header {
+  width: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 100px;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+/*logo*/
+.logo {
+  font-size: 32px;
+  color:  #c4c4c4;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.logo:hover {
+  color:#f1f1f1;
+  transition: 0.3s;
+}
+/*nav bar*/
+.navbar a {
+  position: relative;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s 
+}
+/*.navbar a:hover::before {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}*/
+/*side bar menu*/
+.sidenav {
+    height: 100%; 
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: gray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #b9b9b9;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+/*button*/
+.button {
+    display: inline-block;
+	margin: 0 8px;
+	padding: 6px 10px;
+	font-size: 18px;
+    color: white;
+	text-decoration: none;
+    border: none;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	background-color: red;
+	box-shadow: 0px 0px 0 white;
+    transition: 0.2s;
+}
+.button:hover {
+	transform: translateY(-5px);
+	box-shadow: 0px 5px 0px 0px;
+    transition: 0.2s;
+}
+/*Parallax*/
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -2;
+}
+.background, .foreground {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: 100%;
+    z-index: -2;
+}
+.background {
+    margin-left: -10;
+    transform: translateZ(-10px) scale(2);
+}
+.foreground {
+    transform: translateZ(-5px) scale(1.5);
+}
+.title {
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0 0 5px black;
+    transform: translateZ(-5px) scale(1.5);
+}
+.box {
+    margin: auto;
+    padding: 25px;
+    height: 100%;
+    width: 75%;
+    background-color: #b9b9b9;
+    align-item: center;
+}
+section {
+    font-size: 2rem;
+    padding: 2rem;
+    background: #333;
+    color: white;
+}
+/*login form*/
+.form-container {
+    width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*info box*/
+#infoBox {
+    display: none;
+    margin-top: 10px;
+}
+/*table*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 2%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+/*text*/
+h2, b, p, u {
+    padding-left: 2%;
+    padding-top: 1%;
+}
+ol, ul {
+    padding: 3%;
+}
+/*ensuring proper size of page*/
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
